@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little About Me | My Personal World</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --lavender: #c9b5e8;
+  --pink: #f3dce7;
+  --cream: #fffaf5;
+  --purple: #79618f;
+  --dark: #51445b;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(255,250,245,0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 15px #79618f12;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  color: var(--purple);
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #b58acb;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 10%;
+  gap: 40px;
+  background: linear-gradient(120deg, #f8e9ef, #eee6fa, #fff8ef);
+}
+
+.hero-text {
+  max-width: 560px;
+}
+
+.small-heading {
+  color: #9874b0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(43px, 6vw, 70px);
+  line-height: 1.2;
+  margin: 20px 0;
+  color: #655074;
+}
+
+.hero h1 span {
+  color: #bd8cba;
+  font-style: italic;
+}
+
+.hero p {
+  color: #796b80;
+  margin-bottom: 28px;
+  max-width: 470px;
+}
+
+.btn {
+  display: inline-block;
+  background: #987bb3;
+  color: white;
+  padding: 13px 27px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #705780;
+  transform: translateY(-3px);
+}
+
+.hero-card {
+  width: 290px;
+  min-height: 350px;
+  background: white;
+  padding: 15px;
+  border-radius: 150px 150px 20px 20px;
+  box-shadow: 0 15px 40px #79618f20;
+  transform: rotate(3deg);
+  text-align: center;
+}
+
+.hero-card .photo {
+  width: 100%;
+  height: 255px;
+  border-radius: 145px 145px 12px 12px;
+  background: linear-gradient(140deg,#ead9f4,#f8dce8);
+  display: grid;
+  place-items: center;
+  font-size: 65px;
+}
+
+.hero-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 14px;
+  color: var(--purple);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 85px 10%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  color: #765d89;
+}
+
+.section-title p {
+  color: #9b8da1;
+  font-size: 14px;
+}
+
+/* ABOUT */
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: white;
+}
+
+.about-art {
+  flex: 1;
+  min-height: 290px;
+  border-radius: 25px;
+  background: linear-gradient(140deg,#f5e0ed,#e8ddf5);
+  display: grid;
+  place-items: center;
+  font-size: 95px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--purple);
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.about-text p {
+  color: #81748a;
+  margin-bottom: 15px;
+}
+
+/* INTEREST CARDS */
+
+.interests {
+  background: #fcf6fa;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 30px 22px;
+  text-align: center;
+  border-radius: 22px;
+  box-shadow: 0 7px 25px #79618f10;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px #79618f20;
+}
+
+.card .emoji {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #866b9b;
+  margin-bottom: 10px;
+}
+
+/* WHAT I LOVE */
+
+.love {
+  background: linear-gradient(120deg,#f5e7f1,#eee8f8);
+}
+
+.love-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+
+.love-item {
+  background: #ffffffc9;
+  padding: 24px 12px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.love-item span {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+/* DREAMS */
+
+.dreams {
+  background: white;
+  text-align: center;
+}
+
+.dream-box {
+  max-width: 700px;
+  margin: auto;
+  background: #fbf4f9;
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid #eadcf0;
+}
+
+.dream-box h3 {
+  font-family: 'Playfair Display', serif;
+  color: #886c9e;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* GALLERY */
+
+.gallery {
+  background: #fcf6fa;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.gallery-item {
+  min-height: 190px;
+  border-radius: 20px;
+  background: linear-gradient(140deg,#f2ddeb,#e7def5);
+  display: grid;
+  place-items: center;
+  font-size: 55px;
+  transition: 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+/* QUOTE */
+
+.quote {
+  text-align: center;
+  background: linear-gradient(120deg,#e9dff4,#f8e6ef);
+}
+
+.quote h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-style: italic;
+  color: #775d8b;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  background: #6e587d;
+  color: white;
+  padding: 35px 15px;
+}
+
+footer p {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 750px) {
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 65px 7%;
+  }
+
+  .hero-card {
+    width: 250px;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .love-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  section {
+    padding: 65px 7%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="logo">A Little About Me ♡</div>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#interests">Interests</a></li>
+    <li><a href="#love">What I Love</a></li>
+    <li><a href="#dreams">Dreams</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+
+<header class="hero" id="home">
+
+  <div class="hero-text">
+
+    <div class="small-heading">
+      ✿ Welcome to my little world
+    </div>
+
+    <h1>
+      Hello, I'm <span>Rabia!</span>
+    </h1>
+
+    <p>
+      A dreamer, a creative soul, and a girl
+      who loves learning new things.
+      This is a little corner of the internet
+      where I share my interests, dreams,
+      creativity, and everything that makes me me.
+    </p>
+
+    <a href="#about" class="btn">Explore My World ♡</a>
+
+  </div>
+
+  <div class="hero-card">
+
+    <div class="photo">🌷</div>
+
+    <h3>My Little Universe</h3>
+
+    <p>Dream • Create • Grow</p>
+
+  </div>
+
+</header>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="about-art">🎀</div>
+
+  <div class="about-text">
+
+    <div class="small-heading">A little introduction</div>
+
+    <h2>About Me</h2>
+
+    <p>
+      Hello! I'm Rabia, a university student
+      with big dreams and a curious mind.
+      I love exploring new ideas, learning
+      different skills, and expressing myself
+      through creativity.
+    </p>
+
+    <p>
+      I believe that every day is an opportunity
+      to learn something new and become
+      a better version of ourselves.
+    </p>
+
+    <p>
+      I'm still discovering my path, collecting
+      memories, and building the future
+      I dream about.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- INTERESTS -->
+
+<section class="interests" id="interests">
+
+  <div class="section-title">
+
+    <h2>My Interests</h2>
+
+    <p>Little things that make my world special ♡</p>
+
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="emoji">💻</div>
+      <h3>Technology</h3>
+      <p>
+        I love coding, computer science,
+        websites, and discovering
+        new technologies.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🎨</div>
+      <h3>Crafts & Art</h3>
+      <p>
+        I enjoy creating handmade jewellery,
+        crochet projects, and beautiful
+        greeting cards.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">📖</div>
+      <h3>Writing</h3>
+      <p>
+        I love writing stories, exploring
+        imagination, and expressing
+        thoughts through words.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WHAT I LOVE -->
+
+<section class="love" id="love">
+
+  <div class="section-title">
+
+    <h2>Things I Love</h2>
+
+    <p>Little joys, big happiness 🌸</p>
+
+  </div>
+
+  <div class="love-grid">
+
+    <div class="love-item">
+      <span>🧶</span>
+      Crocheting
+    </div>
+
+    <div class="love-item">
+      <span>💎</span>
+      Handmade Jewellery
+    </div>
+
+    <div class="love-item">
+      <span>💌</span>
+      Cute Cards
+    </div>
+
+    <div class="love-item">
+      <span>📚</span>
+      Novels
+    </div>
+
+    <div class="love-item">
+      <span>☕</span>
+      Cozy Moments
+    </div>
+
+    <div class="love-item">
+      <span>🌷</span>
+      Flowers
+    </div>
+
+    <div class="love-item">
+      <span>💻</span>
+      Coding
+    </div>
+
+    <div class="love-item">
+      <span>✨</span>
+      New Ideas
+    </div>
+
+  </div>
+
+</section>
+
+<!-- DREAMS -->
+
+<section class="dreams" id="dreams">
+
+  <div class="section-title">
+
+    <h2>My Dreams & Goals</h2>
+
+    <p>A future I'm excited to create ♡</p>
+
+  </div>
+
+  <div class="dream-box">
+
+    <h3>Dream Big, Start Small</h3>
+
+    <p>
+      I dream of becoming a successful,
+      independent woman. I want to become
+      a skilled programmer, create my own
+      projects, explore new opportunities,
+      and build something meaningful.
+
+      Most importantly, I want to make my
+      family proud and create a future
+      filled with growth and happiness.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+  <div class="section-title">
+
+    <h2>My Creative Corner</h2>
+
+    <p>A little collection of things I enjoy ♡</p>
+
+  </div>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item">🧶</div>
+
+    <div class="gallery-item">💎</div>
+
+    <div class="gallery-item">💌</div>
+
+    <div class="gallery-item">🎨</div>
+
+    <div class="gallery-item">📖</div>
+
+    <div class="gallery-item">🌸</div>
+
+  </div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+  <h2>
+    "Still learning, still dreaming,
+    still creating my own story."
+  </h2>
+
+  <p style="margin-top:18px;">
+    With love, Rabia ♡
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <h2 style="font-family:'Playfair Display',serif;">
+    A Little About Me ♡
+  </h2>
+
+  <p>Thank you for visiting my little world!</p>
+
+  <p>Made with love & creativity 🌷</p>
+
+  <p>© 2026 Rabia | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
